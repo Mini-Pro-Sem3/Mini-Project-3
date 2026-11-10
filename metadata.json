@@ -1,0 +1,6 @@
+{
+  "name": "CivicClean – Public Waste Collection Monitoring System",
+  "description": "Connect citizens with municipal sanitation authorities to report uncollected garbage, track cleaning progress, and verify completed sanitation work.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

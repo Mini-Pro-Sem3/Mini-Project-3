@@ -1,0 +1,487 @@
+# Project: Public Waste Collection Monitoring System
+
+Design and develop a complete, modern, responsive web application called **"CivicClean – Public Waste Collection Monitoring System."**
+
+The purpose of this platform is to connect citizens with municipal sanitation authorities by allowing citizens to report uncollected garbage, upload geotagged photographs, track cleaning progress and verify whether reported sanitation issues have actually been addressed.
+
+The platform should have two separate user roles:
+1. Citizen
+2. Municipal Administrator (Admin)
+
+The website should be functional, visually polished and designed like a real-world civic technology product.
+
+## 1. DESIGN LANGUAGE AND VISUAL IDENTITY
+
+Create a minimalistic, modern and elegant interface.
+
+**Colour palette:**
+- Primary: Olive Green (#687447)
+- Dark Olive: (#424D2B)
+- Secondary: Warm Cream (#F6F5EC)
+- Background: Off-white (#FAFAF5)
+- Accent: Muted Terracotta (#C77B59)
+- Text: Charcoal (#292D25)
+- Success: Soft Sage Green (#A8B89A)
+- Borders: Light warm grey (#E6E5DA)
+
+Do NOT use purple gradients, blue gradients, neon colours or overly saturated colours.
+
+Use olive green as the main brand colour, complemented by warm cream and subtle terracotta accents.
+
+**Typography:**
+Use Inter or DM Sans for a clean, contemporary appearance. Use clear typography hierarchy, comfortable spacing and readable text.
+
+**Visual style:**
+- Minimalistic layouts with generous whitespace.
+- Rounded cards with subtle shadows.
+- Thin borders and clean dividers.
+- Simple line icons.
+- Small, tasteful animations and hover effects.
+- Professional dashboard layouts.
+- Consistent buttons, inputs and navigation.
+- Avoid clutter and excessive decorative elements.
+
+The website should feel like a combination of a modern community platform and a professional municipal management dashboard.
+
+## 2. LANDING PAGE
+
+Create an attractive landing page introducing the Public Waste Collection Monitoring System.
+
+Include:
+
+**Navigation bar:**
+- Logo: CivicClean (use a simple leaf or recycling-inspired icon).
+- Home
+- How It Works
+- Community Reports
+- About
+- Login / Get Started
+
+**Hero section:**
+
+Main heading:
+"Cleaner Streets Start With Us."
+
+Supporting text:
+"Report uncollected garbage, track sanitation progress and work together to build cleaner, healthier communities."
+
+Include two prominent buttons:
+- Report an Issue
+- Explore Community Reports
+
+Use a large visual showing a clean urban neighbourhood, sanitation workers or waste collection activities.
+
+**Impact statistics section:**
+Display statistics such as:
+- Total Complaints Reported
+- Issues Resolved
+- Areas Covered
+- Active Reports
+
+Use visually appealing number cards.
+
+**How It Works section:**
+Show a simple four-step process:
+1. Spot the garbage.
+2. Upload a photo and location.
+3. Track cleaning progress.
+4. Verify the completed work.
+
+**Community reports preview:**
+Display a few recently reported garbage issues with photographs, location and status.
+
+**Footer:**
+Include About Us, Contact, Privacy Policy and project information.
+
+## 3. AUTHENTICATION SYSTEM
+
+Create two separate login experiences.
+
+### Citizen Login / Registration
+
+Design a clean login page with:
+- Email address
+- Password
+- Login button
+- Create an account option
+- Forgot password
+- Google login option (if supported)
+
+Registration should include:
+- Full name
+- Email
+- Phone number
+- Password
+- Confirm password
+
+After successful authentication, redirect the user to the Citizen Dashboard.
+
+### Admin Login
+
+Create a separate administrator login page.
+
+Include:
+- Admin email
+- Password
+- Login button
+- Secure authentication
+
+Only authorised administrators should be able to access the admin dashboard.
+
+Use role-based authentication and protect all restricted routes.
+
+## 4. CITIZEN DASHBOARD
+
+Create a modern citizen dashboard with a sidebar or clean top navigation.
+
+Navigation items:
+- Overview
+- Report Garbage
+- My Complaints
+- Community Feed
+- Notifications
+- Profile
+- Logout
+
+The dashboard should welcome the logged-in citizen.
+
+Display summary cards:
+- My Total Reports
+- Pending Complaints
+- Cleaning In Progress
+- Successfully Resolved
+
+Also include:
+- Recent complaints submitted by the citizen.
+- Latest community reports.
+- Notifications about complaint updates.
+- A small map showing nearby reported garbage locations.
+
+## 5. REPORT GARBAGE FEATURE
+
+This is one of the most important features of the application.
+
+Create a dedicated "Report Garbage" page with a clean complaint submission form.
+
+The form should contain:
+
+1. Upload Photograph:
+   - Allow citizens to upload one or multiple photographs of uncollected garbage.
+   - Display an image preview before submission.
+   - Allow image removal and replacement.
+
+2. Location:
+   - Automatically detect the citizen's current location using browser GPS, with permission.
+   - Display latitude and longitude.
+   - Show the detected location on an interactive map.
+   - Allow citizens to manually select or adjust the location using a map pin.
+
+3. Address:
+   - Allow the citizen to enter a landmark, street name or area.
+
+4. Description:
+   - Text area describing the garbage problem.
+
+5. Garbage Category:
+   - Overflowing dustbin
+   - Roadside garbage
+   - Uncollected household waste
+   - Construction waste
+   - Illegal dumping
+   - Other
+
+6. Submit Complaint button.
+
+After submission:
+- Generate a unique complaint ID.
+- Save the complaint with its photograph, location, description, date and citizen details.
+- Display a success confirmation.
+- Redirect the citizen to the complaint details page.
+
+## 6. COMPLAINT TRACKING
+
+Citizens must be able to track the progress of every complaint they submit.
+
+Create a dedicated "My Complaints" page.
+
+Display complaints in attractive cards containing:
+- Complaint ID
+- Uploaded photograph
+- Location
+- Date reported
+- Complaint description
+- Current status
+- View Details button
+
+**Complaint status workflow:**
+
+Use four clearly distinguishable stages:
+
+1. Submitted – Complaint successfully registered.
+2. Assigned – Complaint assigned to a municipal cleaning team.
+3. In Progress – Cleaning work has started.
+4. Resolved – Cleaning work has been completed.
+
+Display the status using a visual horizontal progress tracker or timeline.
+
+Each complaint details page should show:
+- Original uploaded photograph.
+- Location on map.
+- Current complaint status.
+- Timeline of status changes.
+- Date and time of each update.
+- Municipal remarks or updates.
+- Before-and-after cleaning photographs when available.
+
+Send an in-app notification whenever the complaint status changes.
+
+## 7. COMMUNITY FEED – CITIZEN VERIFICATION
+
+Create a social-style community page where citizens can view garbage complaints submitted by other citizens.
+
+This feature is important because it introduces community participation and transparency.
+
+Design the feed using clean, image-focused cards.
+
+Each post should display:
+- Citizen's name or anonymous username.
+- Garbage photograph.
+- Location and area.
+- Description of the issue.
+- Date and time reported.
+- Complaint ID.
+- Current cleaning status.
+- Number of community verifications.
+
+**Community verification feature:**
+
+Allow citizens to interact with other people's complaints.
+
+Provide two verification actions:
+
+1. "Cleaning Started"
+   - Citizens can confirm whether municipal workers have actually started cleaning the reported location.
+
+2. "Cleaning Completed"
+   - Citizens can confirm whether the garbage has actually been removed and the area is clean.
+
+Display verification counts on each post.
+
+Allow citizens to add comments or updates about the reported location.
+
+IMPORTANT:
+- A citizen should not be able to change the official complaint status directly.
+- Community verification should be recorded separately from the administrator's official status.
+- Prevent duplicate verification by the same user for the same complaint.
+- Display verification counts to administrators so they can cross-check the reported progress.
+
+Add filters:
+- All Reports
+- Recently Reported
+- Cleaning Started
+- In Progress
+- Resolved
+- Nearby Reports
+
+Include search by location or complaint ID.
+
+## 8. ADMIN DASHBOARD
+
+Create a completely separate, professional administrator dashboard.
+
+The admin dashboard should be designed for municipal authorities to monitor and manage all sanitation complaints.
+
+Use a sidebar with:
+
+- Dashboard Overview
+- All Complaints
+- Map View
+- Assign Cleaning Teams
+- In Progress
+- Resolved Complaints
+- Community Verifications
+- Hotspot Analytics
+- Notifications
+- Logout
+
+**Dashboard overview:**
+
+Display statistic cards:
+- Total Complaints
+- New Complaints
+- Assigned Complaints
+- In Progress
+- Resolved Complaints
+- Resolution Rate
+
+**All Complaints Management:**
+
+Display all citizen-submitted complaints in a structured table.
+
+Columns:
+- Complaint ID
+- Photograph
+- Citizen Name
+- Location
+- Category
+- Date Reported
+- Current Status
+- Assigned Team
+- Actions
+
+Provide:
+- Search functionality.
+- Filter by status.
+- Filter by location.
+- Filter by category.
+- Sort by date.
+- View Complaint Details.
+
+When the admin opens a complaint, show the full complaint information, photograph and exact location on the map.
+
+**Admin actions:**
+- Assign complaint to a cleaning team.
+- Update status to Assigned.
+- Update status to In Progress.
+- Mark complaint as Resolved.
+- Add official remarks.
+- Upload after-cleaning photographs.
+- View citizen verification counts.
+
+Whenever an administrator updates a complaint, the citizen should receive a notification.
+
+## 9. MAP VIEW AND HOTSPOT ANALYTICS
+
+Create an interactive map-based monitoring system.
+
+Use OpenStreetMap with Leaflet or Google Maps API.
+
+Display all reported garbage complaints using map markers.
+
+Use different marker colours for:
+- New complaints.
+- Assigned complaints.
+- Cleaning in progress.
+- Resolved complaints.
+
+When an admin clicks a marker, display:
+- Complaint ID
+- Photograph
+- Location
+- Current status
+- Date reported
+- View Details option.
+
+Create a Hotspot Analytics section to identify areas with repeated garbage complaints.
+
+Include:
+- Areas with the highest number of complaints.
+- Repeatedly reported locations.
+- Pending complaints by area.
+- Complaint resolution statistics.
+- Visual charts showing complaints over time.
+- Area-wise sanitation performance.
+
+Use simple, elegant charts that match the olive-green visual theme.
+
+## 10. NOTIFICATIONS
+
+Create a notification system for citizens and administrators.
+
+Citizens should receive notifications when:
+- Their complaint is successfully submitted.
+- Their complaint is assigned.
+- Cleaning work begins.
+- Cleaning is marked completed.
+- Their complaint receives community verification.
+
+Administrators should receive notifications when:
+- A new complaint is submitted.
+- A complaint receives multiple community verifications.
+- Citizens report that cleaning has started or completed.
+
+Include a notification icon with an unread notification count.
+
+## 11. DATABASE AND TECHNICAL REQUIREMENTS
+
+Build the application with a scalable architecture.
+
+Suggested technology stack based on the project proposal:
+
+Frontend:
+- React.js
+- Tailwind CSS
+- React Router
+- Lucide React icons
+
+Backend:
+- Node.js
+- Express.js
+
+Database:
+- MongoDB or MySQL
+
+Authentication:
+- Firebase Authentication or JWT-based authentication.
+- Role-based access control for citizens and admins.
+
+Image Storage:
+- Cloudinary or Firebase Storage.
+
+Maps:
+- OpenStreetMap with Leaflet.
+- Browser GPS for geolocation.
+
+Notifications:
+- Firebase Cloud Messaging or in-app notifications.
+
+Version Control:
+- Git and GitHub.
+
+## 12. FUNCTIONAL REQUIREMENTS
+
+Do not create a website that is only a static UI prototype.
+
+Implement functional interactions wherever possible:
+
+- Citizen registration and login.
+- Admin login with role restrictions.
+- Complaint submission.
+- Photograph uploads.
+- GPS location detection.
+- Complaint storage in the database.
+- Complaint status updates.
+- Community feed.
+- Citizen verification.
+- Admin complaint management.
+- Interactive maps.
+- Search and filtering.
+- Notifications.
+- Dashboard statistics.
+
+Connect the frontend to a working backend and database. If API keys or external services are unavailable during development, provide clearly identified demo data and a functional fallback rather than pretending that real GPS, authentication, notifications or map services are connected.
+
+Create realistic sample complaints and users so that all dashboard features can be demonstrated.
+
+## 13. FINAL DESIGN EXPECTATION
+
+The final result should look like a polished, production-quality civic technology platform.
+
+Prioritise:
+- Excellent UI/UX.
+- Consistent olive-green and warm-neutral colour scheme.
+- Minimalistic and modern design.
+- Easy navigation.
+- Responsive desktop, tablet and mobile layouts.
+- Clear complaint status indicators.
+- High-quality dashboard design.
+- Meaningful community interaction.
+- Strong separation between citizen and administrator functionality.
+
+Make the landing page visually impressive, the citizen dashboard friendly and the admin dashboard data-focused.
+
+The central idea of the project is:
+
+"Report. Track. Verify. Together, we create cleaner communities."
+
+Build the complete application with all the above pages, components and user flows.
